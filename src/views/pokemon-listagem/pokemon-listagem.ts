@@ -39,10 +39,15 @@ export class PokemonListagem {
 
     id.textContent = pokemon.id.toString();
     nomePokemon.textContent = pokemon.nome;
-    imagem.src = pokemon.spriteUrl
+    imagem.src = pokemon.spriteUrl;
 
     const cardPokemon = document.createElement('div');
     cardPokemon.classList.add('card-pokemon');
+
+    cardPokemon.addEventListener('click', (sender) => 
+    {
+      window.location.href = `pokemon-detalhes.html?nome=${pokemon.nome}`
+    })
 
     cardPokemon.appendChild(id);
     cardPokemon.appendChild(imagem);
