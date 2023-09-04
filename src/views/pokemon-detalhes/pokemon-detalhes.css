@@ -49,9 +49,8 @@ h1 {
 }
 
 .btn {
-  display: grid;
-  padding: 15px;
-
+  display: grid; 
+  place-items: center;
   border: none;
   border-radius: 10px;
 }
